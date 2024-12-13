@@ -1,40 +1,84 @@
-name: Decompilation issue
-description: Create a report to help us improve jadx decompiler
-title: '[core] '
-labels:
-  - Core
-  - bug
-body:
-  - type: markdown
-    attributes:
-      value: |
-        **Checks before submit**
-        - check [Troubleshooting Q&A](https://github.com/skylot/jadx/wiki/Troubleshooting-Q&A) section on wiki
-        - try [latest unstable build](https://nightly.link/skylot/jadx/workflows/build-artifacts/master), maybe issue already fixed
-        - search existing issues by exception message
-  - type: textarea
-    id: details
-    attributes:
-      label: Issue details
-      placeholder: >-
-        Describe issue
-    validations:
-      required: true
-  - type: textarea
-    id: logs
-    attributes:
-      label: Relevant log output or stacktrace
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: java
-  - type: textarea
-    id: sample
-    attributes:
-      label: Provide sample and class/method full name
-      description: |
-        - sample: attach or provide a link
-        - full name of class or method with issue
-        - other details which may help to reproduce issue
-  - type: input
-    id: jadx-version
-    attributes:
-      label: Jadx version
+internal final class IBS_TUGDimensionsContract
+{
+
+    Name businessDimension;
+
+}
+   " businessDimension Nameÿ   ñ     
+DataMember    "Dimension"ÿÿ
+
+parmDimension   ò businessDimension_businessDimension Nameÿô  Nameÿ ÿIBS_TUGDimensionsContractÿÐ !     DataContractAttributeÿä[DataContractAttribute]
+class IBS_TUGSalesHeaderContract
+{
+    TransactionID transactionCode;
+    str salesID;
+    //SalesType salesType;
+    CustAccount custAccount;
+    InventSiteId inventID;
+    InventLocationId warehouse;
+    CurrencyCodeBase currency;
+    SalesShippingDateRequested transDate;
+    str company;
+    List SalesLines;
+ 
+
+}
+	   " transactionCode 
+TransactionIDÿ" salesID  ÿ" custAccount CustAccountÿ" inventID InventSiteIdÿ" 	warehouse InventLocationIdÿ" currency CurrencyCodeBaseÿ" 	transDate SalesShippingDateRequestedÿ" company  ÿ" 
+SalesLines Listÿ   ñ     
+DataMember    	"company"ÿÿ
+parmCompany   ò company_company  ÿô   ÿ ÿñ     
+DataMember    "transaction_code"ÿÿ
+
+parmTransCode   ò transactionCode_transactionCode 
+TransactionIDÿô  
+TransactionIDÿ ÿñ     
+DataMember    	"SalesId"ÿÿ
+parmSalesID   ò salesID_salesID  ÿô   ÿ ÿñ     
+DataMember    
+"CustAccount"ÿÿ
+parmCustomerAccount   ò custAccount_custAccount CustAccountÿô  CustAccountÿ ÿñ     
+DataMember    "InventLocationId"ÿÿ
+
+parmWarehouse   ò 	warehouse
+_warehouse InventLocationIdÿô  InventLocationIdÿ ÿñ     
+DataMember    "currency_code"ÿÿ
+parmCurrency   ò currency	_currency CurrencyCodeBaseÿô  CurrencyCodeBaseÿ ÿñ     
+DataMember    "TransDate"ÿÿ
+parmTransactionDate   ò 	transDate
+_transDate SalesShippingDateRequestedÿô  SalesShippingDateRequestedÿ ÿñ     DataMemberAttribute    "SalesLine"ÿÿ DataCollection        Classÿ	 Typesÿ     IBS_TUGSalesLineContractÿ ÿ ÿ classStrÿÿ AifCollectionTypeAttribute    'SalesLines'ÿ     Classÿ	 Typesÿ     IBS_TUGSalesLineContractÿ ÿ ÿ classStrÿÿ AifCollectionTypeAttribute    'return'ÿ     Classÿ	 Typesÿ     IBS_TUGSalesLineContractÿ ÿ ÿ classStrÿÿ
+parmSalesLines   ò 
+SalesLines_SalesLines Listÿô  Listÿ ÿIBS_TUGSalesHeaderContractÿÐ !     DataContractÿ…[DataContract] 
+class IBS_TUGDimensionsResponse extends IBS_TUGResponseContract
+{
+    str dimensionAttribute, dimensionValue;
+
+}IBS_TUGResponseContract
+   " dimensionAttribute  ÿ" dimensionValue  ÿ   ñ     
+DataMember    "DimAttribute"ÿÿ
+parmDimennsionAttribute   ò dimensionAttribute_dimensionAttribute  ÿô   ÿ ÿñ     
+DataMember    
+"DimValue"ÿÿ
+parmDimensionValue   ò dimensionValue_dimensionValue  ÿô   ÿ ÿIBS_TUGDimensionsResponseÿÐ !     DataContractAttributeÿ«[DataContractAttribute]
+class IBS_TUGSalesRequestContract
+{
+    str dataAreaId;
+    IBS_TUGSalesHeaderContract IBS_TUGSalesHeaderContract;
+    List SalesLines;
+
+
+}
+   " 
+dataAreaId  ÿ" IBS_TUGSalesHeaderContract IBS_TUGSalesHeaderContractÿ" 
+SalesLines Listÿ   ñ     
+DataMember    "data_area"ÿÿ
+parmDataAreaID   ò 
+dataAreaId_value  ÿô   ÿ ÿñ     
+DataMember    "sales_header"ÿÿ
+parmIBS_TUGSalesHeaderContract   ò IBS_TUGSalesHeaderContract_IBS_TUGSalesHeaderContract IBS_TUGSalesHeaderContractÿô  IBS_TUGSalesHeaderContractÿ ÿñ     DataMemberAttribute    "sales_line"ÿÿ DataCollection        Classÿ	 Typesÿ     IBS_TUGSalesLineContractÿ ÿ ÿ classStrÿÿ AifCollectionTypeAttribute    'SalesLines'ÿ     Classÿ	 Typesÿ     IBS_TUGSalesLineContractÿ ÿ ÿ classStrÿÿ AifCollectionTypeAttribute    'return'ÿ     Classÿ	 Typesÿ     IBS_TUGSalesLineContractÿ ÿ ÿ classStrÿÿ
+parmSalesLines   ò 
+SalesLines_SalesLines Listÿô  Listÿ ÿIBS_TUGSalesRequestContractÿÐ ! tpublic class IBS_TUGSalesAPI
+{
+    SalesTable salesHeader;
+    MarkupTrans markUpTrans;
+    
